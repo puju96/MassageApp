@@ -12,9 +12,13 @@
 		84A5C0852162376C0001C98F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84A5C0832162376C0001C98F /* Main.storyboard */; };
 		84A5C0872162376F0001C98F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84A5C0862162376F0001C98F /* Assets.xcassets */; };
 		84A5C08A2162376F0001C98F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84A5C0882162376F0001C98F /* LaunchScreen.storyboard */; };
+		84A5C0952162387D0001C98F /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84A5C0942162387D0001C98F /* SWRevealViewController.m */; };
+		B4726C06EADEB5510ABAEFD0 /* Pods_msgApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C3A54BC294937B54B6E1533 /* Pods_msgApp.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		13DBC7E2430039BD6C08FDF1 /* Pods-msgApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-msgApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-msgApp/Pods-msgApp.release.xcconfig"; sourceTree = "<group>"; };
+		2C3A54BC294937B54B6E1533 /* Pods_msgApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_msgApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		84A5C07C2162376C0001C98F /* msgApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = msgApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84A5C07F2162376C0001C98F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		84A5C0812162376C0001C98F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +26,10 @@
 		84A5C0862162376F0001C98F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		84A5C0892162376F0001C98F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		84A5C08B2162376F0001C98F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		84A5C0922162387B0001C98F /* msgApp-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "msgApp-Bridging-Header.h"; sourceTree = "<group>"; };
+		84A5C0932162387C0001C98F /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
+		84A5C0942162387D0001C98F /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
+		DA7B7571FE51E16E806F2345 /* Pods-msgApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-msgApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-msgApp/Pods-msgApp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +37,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B4726C06EADEB5510ABAEFD0 /* Pods_msgApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		592B0288A27200B02A3D92CB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2C3A54BC294937B54B6E1533 /* Pods_msgApp.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		66E2CF05EAC317FCBE0EFEBB /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				DA7B7571FE51E16E806F2345 /* Pods-msgApp.debug.xcconfig */,
+				13DBC7E2430039BD6C08FDF1 /* Pods-msgApp.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		84A5C0732162376C0001C98F = {
 			isa = PBXGroup;
 			children = (
 				84A5C07E2162376C0001C98F /* msgApp */,
 				84A5C07D2162376C0001C98F /* Products */,
+				66E2CF05EAC317FCBE0EFEBB /* Pods */,
+				592B0288A27200B02A3D92CB /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,6 +82,7 @@
 		84A5C07E2162376C0001C98F /* msgApp */ = {
 			isa = PBXGroup;
 			children = (
+				84A5C091216238300001C98F /* supported File */,
 				84A5C07F2162376C0001C98F /* AppDelegate.swift */,
 				84A5C0812162376C0001C98F /* ViewController.swift */,
 				84A5C0832162376C0001C98F /* Main.storyboard */,
@@ -64,6 +93,16 @@
 			path = msgApp;
 			sourceTree = "<group>";
 		};
+		84A5C091216238300001C98F /* supported File */ = {
+			isa = PBXGroup;
+			children = (
+				84A5C0932162387C0001C98F /* SWRevealViewController.h */,
+				84A5C0942162387D0001C98F /* SWRevealViewController.m */,
+				84A5C0922162387B0001C98F /* msgApp-Bridging-Header.h */,
+			);
+			path = "supported File";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -71,9 +110,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 84A5C08E2162376F0001C98F /* Build configuration list for PBXNativeTarget "msgApp" */;
 			buildPhases = (
+				575A0CD17C7DBB3DAF4C596B /* [CP] Check Pods Manifest.lock */,
 				84A5C0782162376C0001C98F /* Sources */,
 				84A5C0792162376C0001C98F /* Frameworks */,
 				84A5C07A2162376C0001C98F /* Resources */,
+				BE3597785FE1BFE8B13A20A0 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -96,6 +137,7 @@
 				TargetAttributes = {
 					84A5C07B2162376C0001C98F = {
 						CreatedOnToolsVersion = 10.0;
+						LastSwiftMigration = 1000;
 					};
 				};
 			};
@@ -130,6 +172,51 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		575A0CD17C7DBB3DAF4C596B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-msgApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BE3597785FE1BFE8B13A20A0 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-msgApp/Pods-msgApp-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Socket.IO-Client-Swift/SocketIO.framework",
+				"${BUILT_PRODUCTS_DIR}/Starscream/Starscream.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SocketIO.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Starscream.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-msgApp/Pods-msgApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		84A5C0782162376C0001C98F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -137,6 +224,7 @@
 			files = (
 				84A5C0822162376C0001C98F /* ViewController.swift in Sources */,
 				84A5C0802162376C0001C98F /* AppDelegate.swift in Sources */,
+				84A5C0952162387D0001C98F /* SWRevealViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -280,8 +368,10 @@
 		};
 		84A5C08F2162376F0001C98F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DA7B7571FE51E16E806F2345 /* Pods-msgApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = msgApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -290,6 +380,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "-23.msgApp";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "msgApp/supported File/msgApp-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -297,8 +389,10 @@
 		};
 		84A5C0902162376F0001C98F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 13DBC7E2430039BD6C08FDF1 /* Pods-msgApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = msgApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -307,6 +401,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "-23.msgApp";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "msgApp/supported File/msgApp-Bridging-Header.h";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
